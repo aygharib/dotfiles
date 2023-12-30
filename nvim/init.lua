@@ -1,5 +1,3 @@
--- Looks for lazy in path below
--- Installs lazy if it isn't on the system
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -13,10 +11,5 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local opts = {}
-
 require("vim-options")
-
--- Call lazy's setup function, loading Lazy for us
 require("lazy").setup("plugins")
-
