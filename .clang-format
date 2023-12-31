@@ -7,6 +7,10 @@ MaxEmptyLinesToKeep: 2
 AllowShortFunctionsOnASingleLine: None
 IndentCaseLabels: true
 SpaceAfterCStyleCast: true
+PointerAlignment: Left
+ReferenceAlignment: Left
+IndentAccessModifiers: false
+AccessModifierOffset: -4
 BraceWrapping:
   AfterClass: true
   AfterControlStatement: true
@@ -42,3 +46,7 @@ BraceWrapping:
 # SpacesInCStyleCastParentheses: true
 # SpacesInConditionalStatement: true
 # SpacesInParentheses: true
+# PointerAlignment: Right
+# ReferenceAlignment: Right
+# IndentAccessModifiers: false
+# AccessModifierOffset: -4

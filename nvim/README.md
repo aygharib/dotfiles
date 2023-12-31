@@ -9,6 +9,15 @@ This is a quick reference sheet for my keybindings
 ```
 
 ## Plugins
+### Commment
+```
+gcc - line comment
+gbc - block comment
+gcO - add comment on line above
+gco - add comment on line below
+gcA - add comment at end of line
+```
+
 ### LSP
 ```
 <leader>e - open diagnostics window
