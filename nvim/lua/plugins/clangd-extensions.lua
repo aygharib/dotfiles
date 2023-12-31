@@ -83,6 +83,7 @@ return {
                 border = "none",
             },
         })
+        vim.keymap.set("n", "<leader>fs", ":ClangdSwitchSourceHeader<CR>", {})
     end,
 }
 

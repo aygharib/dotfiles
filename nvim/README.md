@@ -35,6 +35,11 @@ gco - add comment on line below
 gcA - add comment at end of line
 ```
 
+### Cland-extensions
+```
+<leader>fs - switch between source and header
+```
+
 ### LSP
 ```
 <leader>e - open diagnostics window
