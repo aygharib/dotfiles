@@ -11,12 +11,19 @@ This is a quick reference sheet for my keybindings
 ## Plugins
 ### LSP
 ```
-K - display documentation of thing under cursor
-<leader>gd - show definition
-<leader>gD - show declaration
-<leader>gi - show implementation (can be used to show which include includes the thing I'm hovering)
-<leader>gr - show references
+<leader>e - open diagnostics window
+[d - go to previous in diagnostics window
+]d - go to next in diagnostics window
+<leader>q - show diagnostics list
+
+gD - show declaration
+gd - show definition
+K - show hover info
+gi - show implementation
+<C-k> - signature help
+<leader>D - type definition
 <leader>ca - show code actions
+gr - show references
 ```
 
 ### Neo-Tree
