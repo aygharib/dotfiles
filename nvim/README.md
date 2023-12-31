@@ -1,8 +1,8 @@
 # cheatsheet
 This is a quick reference sheet for my keybindings
 
-<leader> is defined as SPACEBAR
-<C> is defined as CONTROL
+`<leader>` is defined as SPACEBAR
+`<C>` is defined as CONTROL
 
 ## General keybinds
 ```
