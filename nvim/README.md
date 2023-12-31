@@ -28,17 +28,17 @@ gr - show references
 
 ### Neo-Tree
 ```
-<C-n> - open file explorer tree
+<leader>fe - open file explorer tree (file-explorer)
 <leader>bf - open buffer float
 ```
 
 ### Telescope
 ```
-<C-p> - fuzzy-find files in project
-<leader>fg - ripgrep for text in all files in project
+<leader>ff - fuzzy-find files in project (fuzzy-find)
+<leader>rg - ripgrep for text in all files in project (rip-grep)
 ```
 
 ### None-LS
 ```
-<leader>gf - auto-format file
+<leader>fa - auto-format file (format all)
 ```
