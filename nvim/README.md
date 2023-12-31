@@ -37,6 +37,25 @@ gr - show references
 
 ### Neo-Tree
 ```
+// Default (https://github.com/nvim-neo-tree/neo-tree.nvim)
+P - toggle preview
+<Esc> - close preview
+l - focus preview
+S - open split
+s - open vsplit
+t - open new tab
+A - add directory
+d - delete
+r - rename
+y - copy to clipboard
+p - paste from clipboard
+q - close window
+<Backspace> - navigate up
+. - set root
+H - toggle hidden files
+/ - fuzzy_finder
+
+// Custom
 <leader>fe - open file explorer tree (file-explorer)
 <leader>bf - open buffer float
 ```
