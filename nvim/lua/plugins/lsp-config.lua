@@ -50,6 +50,15 @@ return {
                 capabilites = capabilities,
                 filetypes = { "c", "cpp", "objc", "objcpp" },
                 root_dir = lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
+                handlers = {
+                    ["textDocument/publishDiagnostics"] = vim.lsp.with(
+                        vim.lsp.diagnostic.on_publish_diagnostics, {
+                            -- Enable virtual text
+                            virtual_text = true,
+                            spacing = 4,
+                        }
+                    ),
+                }
             })
 
             vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, {})
