@@ -6,6 +6,14 @@ This is a quick reference sheet for my keybindings
 
 ## General keybinds
 ```
+% - go to matching brace
+zz - center
+H - go to top of screen
+M - go to mid of screen
+L - go to bot of screen
+{ - go to previous open
+} - go to next open
+<C-w> - switch window using arrow key
 ```
 
 ## Plugins
