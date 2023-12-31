@@ -14,6 +14,15 @@ L - go to bot of screen
 { - go to previous open
 } - go to next open
 <C-w> - switch window using arrow key
+<C-o> - go to previous location
+<C-i> - go to next location
+gg - go to top of file
+G - go to bottom of file
+$ - go to end of line
+0 - to to start of line
+w - move forward one word
+e - move forward one word
+b - move backward one word
 ```
 
 ## Plugins
