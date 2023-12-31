@@ -18,6 +18,8 @@ return {
         lazy = false,
         config = function()
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
+            -- require("clangd_extensions.inlay_hints").setup_autocmd()
+            -- require("clangd_extensions.inlay_hints").set_inlay_hints()
 
             local lspconfig = require("lspconfig")
             lspconfig.tsserver.setup({
@@ -46,11 +48,21 @@ return {
                     "--offset-encoding=utf-16", --temporary fix for null-ls
                     "--header-insertion-decorators",
                     "--header-insertion=iwyu",
+                    "--inlay-hints=true", -- gives the type next to auto
                 },
                 capabilites = capabilities,
                 filetypes = { "c", "cpp", "objc", "objcpp" },
                 root_dir = lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
+                on_attach = function(client, bufnr)
+                    -- require("clangd_extensions.inlay_hints").request_all_inlays()
+                    require("clangd_extensions.inlay_hints").setup_autocmd()
+                    require("clangd_extensions.inlay_hints").set_inlay_hints()
+                end,
             })
+
+            -- vim.keymap.set('n', '<leader>P', function() vim.lsp.buf.inlay_hint(0, nil) end, { desc = "Toggle Inlay Hints" })
+
+            -- vim.lsp.buf.inlay_hint(0, true)
 
             vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, {})
             vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, {})
