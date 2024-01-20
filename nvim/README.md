@@ -35,7 +35,7 @@ gco - add comment on line below
 gcA - add comment at end of line
 ```
 
-### Cland-extensions
+### Clangd-extensions
 ```
 <leader>fs - switch between source and header
 ```
@@ -55,6 +55,19 @@ gi - show implementation
 <leader>D - type definition
 <leader>ca - show code actions
 gr - show references
+```
+
+### vim-markdown
+```
+zR - opens all folds
+zM - closes all folds
+za - open a fold your cursor is on
+zc - close a fold your cursor is on
+zA - open a fold your cursor is on recursively
+zC - close a fold your cursor is on recursively
+zr - reduces fold level throughout the buffer
+zm - increases fold level throughout the buffer
+:Toc - see table of contents
 ```
 
 ### Neo-Tree
