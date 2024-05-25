@@ -10,4 +10,4 @@ cd $SCRIPT_DIR
 cd ..
 
 # Copy tmux folder to config folder on system
-cp -r tmux ~/.config/tmux
+cp -r ~/.config/tmux .
