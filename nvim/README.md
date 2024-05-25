@@ -23,6 +23,7 @@ $ - go to end of line
 w - move forward one word
 e - move forward one word
 b - move backward one word
+== - auto-indent line
 ```
 
 ## Plugins
