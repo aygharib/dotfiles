@@ -40,49 +40,49 @@ return {
                 -- The cmd table is used to pass arguments directly to the language server binary when it is launched
                 -- Without this, clangd automatically uses the default `clangd` command without specifying any extra arguments
                 -- With this setup, we can include which extra flags that could improve functionality like background indexing or better completion
-                cmd = {
-                    "clangd",
-                    "--clang-tidy=true",                -- Enable clang-tidy for linting
-                    "--clang-tidy-checks=" ..
-                    table.concat({
-                        "bugprone-*",           -- Detects common bugs
-                        "cert-*",               -- Security best practices
-                        "clang-diagnostic-*",
-                        "clang-analyzer-*",
-                        "concurrency-*",        -- Detects thread-safety issues
-                        "cppcoreguidelines-*",  -- Enforces C++ Core Guidelines
-                        "misc-*",               -- General purpose linting checks
-                        "modernize-*",          -- Enforces C++11/14/17/20 best practices
-                        "performance-*",        -- Identifies slow code patterns
-                        "portability-*",        -- Ensures portability across compilers
-                        "readability-*",        -- Improves readability & maintainability
-                        -- "modernize-use-trailing-return-type",
-                        -- "-modernize-use-trailing-return-type", -- (Optional) Disable trailing return type enforcement
-                        -- "-readability-identifier-naming",      -- (Optional) Avoid strict naming convention enforcement
-                    }, ","),  -- Converts the table to a comma-separated string
+                -- cmd = {
+                --     "clangd",
+                --     "--clang-tidy=true",                -- Enable clang-tidy for linting
+                --     "--clang-tidy-checks=" ..
+                --     table.concat({
+                --         "bugprone-*",           -- Detects common bugs
+                --         "cert-*",               -- Security best practices
+                --         "clang-diagnostic-*",
+                --         "clang-analyzer-*",
+                --         "concurrency-*",        -- Detects thread-safety issues
+                --         "cppcoreguidelines-*",  -- Enforces C++ Core Guidelines
+                --         "misc-*",               -- General purpose linting checks
+                --         "modernize-*",          -- Enforces C++11/14/17/20 best practices
+                --         "performance-*",        -- Identifies slow code patterns
+                --         "portability-*",        -- Ensures portability across compilers
+                --         "readability-*",        -- Improves readability & maintainability
+                --         -- "modernize-use-trailing-return-type",
+                --         -- "-modernize-use-trailing-return-type", -- (Optional) Disable trailing return type enforcement
+                --         -- "-readability-identifier-naming",      -- (Optional) Avoid strict naming convention enforcement
+                --     }, ","),  -- Converts the table to a comma-separated string
                     
-                    "--completion-style=detailed", -- Better completion
-                    "--header-insertion=never",    -- Don't insert headers automatically
-                    "--all-scopes-completion=true", 
+                --     "--completion-style=detailed", -- Better completion
+                --     "--header-insertion=never",    -- Don't insert headers automatically
+                --     "--all-scopes-completion=true", 
 
-                    --- settings for big codebases
-                    -- speed up indexing and reduce memory usage
-                    "--background-index",  -- Keep indexing in the background. in extreme cases where performance is a real problem this can be disabled
-                    -- "--limit-results=100",
-                    -- -- "--clang-tidy=false",
+                --     --- settings for big codebases
+                --     -- speed up indexing and reduce memory usage
+                --     "--background-index",  -- Keep indexing in the background. in extreme cases where performance is a real problem this can be disabled
+                --     -- "--limit-results=100",
+                --     -- -- "--clang-tidy=false",
 
-                    -- handle large files efficiently
-                    -- "--limit-references=1000",
-                    -- "--limit-symbol-results=500",
-                    -- "--fallback-style=Google",
+                --     -- handle large files efficiently
+                --     -- "--limit-references=1000",
+                --     -- "--limit-symbol-results=500",
+                --     -- "--fallback-style=Google",
 
-                    -- extreme performance needed
-                    -- "--log=error",
-                    -- "--all-scopes-completion=false",
-                    -- "--pch-storage=memory", -- this seams to break clang-tidy
-                    -- "--sync-debounce=500", -- this seams to break clang-tidy -- can increase this for even better performance
-                    -- "--malloc-trim", -- this errors out
-                },
+                --     -- extreme performance needed
+                --     -- "--log=error",
+                --     -- "--all-scopes-completion=false",
+                --     -- "--pch-storage=memory", -- this seams to break clang-tidy
+                --     -- "--sync-debounce=500", -- this seams to break clang-tidy -- can increase this for even better performance
+                --     -- "--malloc-trim", -- this errors out
+                -- },
             })
         end,
     },
