@@ -1,5 +1,5 @@
+-- alpha is a general purpose ui library with some conveniences for writing a greeter ui. 
 return {
-
 	"goolord/alpha-nvim",
 	dependencies = {
 		"nvim-tree/nvim-web-devicons",
@@ -35,12 +35,6 @@ return {
 			hl = "Type",
 			-- wrap = "overflow";
 		}
-
-		local function footer()
-			return "Haskell can suck mo' nads"
-		end
-
-		dashboard.section.footer.val = footer()
 
 		dashboard.opts.opts.noautocmd = true
 		alpha.setup(dashboard.opts)
