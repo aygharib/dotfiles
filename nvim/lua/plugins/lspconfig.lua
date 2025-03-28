@@ -25,11 +25,27 @@ return {
                 local opts = { buffer = bufnr }
                 vim.keymap.set('n', '<leader>gD', vim.lsp.buf.declaration, opts)
                 vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, opts)    -- Go to definition
-                vim.keymap.set('n', '<leader>gi', vim.lsp.buf.implementation, opts)
+                -- vim.keymap.set('n', '<leader>gi', vim.lsp.buf.implementation, opts) -- this doesn't work
                 vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)        -- Rename symbol
-                vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)   -- Code actions
-                vim.keymap.set('n', '<leader>h', vim.lsp.buf.hover, opts)          -- Hover info
+                -- vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)   -- Code actions -- testing definition in another file
+                vim.keymap.set('n', '<leader>K', vim.lsp.buf.hover, opts)          -- Hover info
                 vim.keymap.set('n', '<leader>gr', vim.lsp.buf.references, opts)
+
+
+                vim.diagnostic.config({
+                    virtual_text = {
+                        source = "always",
+                        -- prefix = ".BOOM.", -- this overrides the square symbol
+                        severity_sort = true
+                    },
+                    float = {
+                        source = "always"
+                    }
+                })
+                vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, opts) -- diagnostic list for entire file
+                vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, opts) -- diagnostic list for current line
+
+                -- vim.keymap.set('n', '<leader>sh', vim.lsp.buf.signature_help, opts) -- doesn't work
 
 --             vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, {})
 --             vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, {})

@@ -14,3 +14,5 @@ vim.opt.rtp:prepend(lazypath)
 
 require("config.options")
 require("lazy").setup("plugins")
+
+vim.api.nvim_set_keymap('n', '<leader>rs', ':LspStop<CR>:LspStart<CR>', { noremap = true, silent = true })
